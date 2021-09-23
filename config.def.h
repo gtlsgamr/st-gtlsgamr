@@ -99,40 +99,39 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
+ static const char *colorname[] = {
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#ff5555", /* red     */
+  [2] = "#50fa7b", /* green   */
+  [3] = "#f1fa8c", /* yellow  */
+  [4] = "#bd93f9", /* blue    */
+  [5] = "#ff79c6", /* magenta */
+  [6] = "#8be9fd", /* cyan    */
+  [7] = "#bbbbbb", /* white   */
 
-[0] = "#323437",
-[1] = "#ff5454",
-[2] = "#8cc85f",
-[3] = "#e3c78a",
-[4] = "#80a0ff",
-[5] = "#d183e8",
-[6] = "#79dac8",
-[7] = "#a1aab8",
-
-[8] = "#7c8f8f",
-[9] = "#ff5189",
-[10] = "#36c692",
-[11] = "#bfbf97",
-[12] = "#74b2ff",
-[13] = "#ae81ff",
-[14] = "#85dc85",
-[15] = "#e2637f",
+  /* 8 bright colors */
+  [8]  = "#44475a", /* black   */
+  [9]  = "#ff5555", /* red     */
+  [10] = "#50fa7b", /* green   */
+  [11] = "#f1fa8c", /* yellow  */
+  [12] = "#bd93f9", /* blue    */
+  [13] = "#ff79c6", /* magenta */
+  [14] = "#8be9fd", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
   /* special colors */
-  [256] = "#282a36", /* background */
+  [256] = "#000", /* background */
   [257] = "#f8f8f2", /* foreground */
-  [258] = "#080808",
-  [259]= "#eeeeee",
 };
+ 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
@@ -187,7 +186,7 @@ static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 //	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
-	//{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+//  { XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 //	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 //	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
