@@ -5,12 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono:pixelsize=18:antialias=true:autohint=true";
+static char *font = "JetBrains Mono Nerd Font:pixelsize=18:antialias=true:autohint=true";
 
 /* Spare fonts */
 static char *font2[] = {
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"JetBrains Mono Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+/*	"JetBrains Mono Nerd Font Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 	"IBM Plex Sans Devanagari:style=Regular",
 };
 static int borderpx = 0;
