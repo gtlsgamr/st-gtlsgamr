@@ -9,8 +9,8 @@ static char *font = "JetBrains Mono:pixelsize=18:antialias=true:autohint=true";
 
 /* Spare fonts */
 static char *font2[] = {
+	"W95FARegular Nerd Font:style=Regular,RegularNerdFontComplete-",
 	"Noto Color Emoji:style=Regular",
-	"DejaVu Sans Mono:style=Book",
 };
 static int borderpx = 0;
 
@@ -80,7 +80,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
