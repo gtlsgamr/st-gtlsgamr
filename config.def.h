@@ -97,7 +97,7 @@ char *termname = "xterm-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
  static const char *colorname[] = {
   /* 8 normal colors */
